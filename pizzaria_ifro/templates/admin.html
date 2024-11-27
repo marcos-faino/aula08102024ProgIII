@@ -4,13 +4,13 @@
         <section class="grid">
             <article class="col">
                 <header><h2>Usuários</h2></header>
-                <a href="/usuarios/create" role="button" class="secondary outline">Novo Usuário</a>
-                <a href="/usuarios/recovery" role="button" class="secondary outline">Listar Usuários</a>
+                <a href="{{ url_for('usuarios.create') }}" role="button" class="secondary outline">Novo Usuário</a>
+                <a href="{{ url_for('usuarios.recovery') }}" role="button" class="secondary outline">Listar Usuários</a>
             </article>
             <article class="col">
                 <header><h2>Categorias</h2></header>
-                <a href="/categorias/create" role="button" class="secondary outline">Nova Categoria</a>
-                <a href="/categorias/recovery" role="button" class="secondary outline">Listar Categorias</a>
+                <a href="{{ url_for('categorias.create') }}" role="button" class="secondary outline">Nova Categoria</a>
+                <a href="{{ url_for('categorias.recovery') }}" role="button" class="secondary outline">Listar Categorias</a>
             </article>
             <article class="col">
                 <header><h2>Pizzas</h2></header>
