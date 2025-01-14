@@ -14,8 +14,8 @@
             </article>
             <article class="col">
                 <header><h2>Pizzas</h2></header>
-                <a href="/pizzas/create" role="button" class="secondary outline">Nova Pizza</a>
-                <a href="/pizzas/create" role="button" class="secondary outline">Listar Pizzas</a>
+                <a href="{{ url_for('pizzas.create') }}" role="button" class="secondary outline">Nova Pizza</a>
+                <a href="{{ url_for('pizzas.recovery') }}" role="button" class="secondary outline">Listar Pizzas</a>
             </article>
         </section>
     {% endblock %}

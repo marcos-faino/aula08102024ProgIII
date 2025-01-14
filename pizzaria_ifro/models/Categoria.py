@@ -6,7 +6,7 @@ class Categoria(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     descricao = db.Column(db.String(50))
     preco = db.Column(db.Numeric(scale=2, precision=8))
-
+    pizzas = db.relationship('Pizza', backref='pizza', lazy=True)
 
     def __init__(self, descricao, preco):
         self.descricao = descricao

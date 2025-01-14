@@ -20,10 +20,13 @@
                     <li><a href="#">Menu</a></li>
                     <li><a href="#">Histórico</a></li>
                     <li><a href="#">Sobre</a></li>
-                    <li><a href="/login">Login</a></li>
-                    <li><a href="/usuarios/create">Novo</a></li>
-                    <li><a href="/admin">Admin Site</a></li>
-
+                    {% if current_user.is_authenticated %}
+                        <li><a href="/admin">Admin Site</a></li>
+                        <li><a href="/usuarios/logout">Sair</a></li>
+                    {% else %}
+                        <li><a href="/usuarios/create">Novo</a></li>
+                        <li><a href="/login">Login</a></li>
+                    {% endif %}
                 </ul>
             </nav>
         </header>

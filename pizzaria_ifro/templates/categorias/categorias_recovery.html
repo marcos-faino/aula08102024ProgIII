@@ -17,12 +17,12 @@
         <tr>
             <td>{{ categoria.id }}</td>
             <td>{{ categoria.descricao }}</td>
-            <td>{{ categoria.preco }}</td>
+            <td>{{ categoria.preco | replace('.',',') }}</td>
             <td>
-                <a role="button" href="#">🗃️</a>
+                <a role="button" href="update/{{ categoria.id }}">🗃️</a>
             </td>
             <td>
-                <a role="button" href="#">🩻</a>
+                <a role="button" href="delete/{{ categoria.id }}">🩻</a>
             </td>
         </tr>
         {% endfor %}
